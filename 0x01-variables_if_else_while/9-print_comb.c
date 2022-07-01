@@ -20,11 +20,9 @@ int main(void)
 		else
 		{
 			putchar(',');
-			putchar(' ');			
+			putchar(' ');
 		}
 	}
-
-	//putchar('$');
 	putchar('\n');
 	return (0);
 }
