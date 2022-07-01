@@ -19,7 +19,15 @@ int main(void)
 		{
 			for (j = x; j <= 9; j++)
 			{
-				for (k = i + 1; k <= 9; k++)
+				if (j != x)
+				{
+					k = 0;
+				}
+				else
+				{
+					k = i + 1;
+				}
+				for (; k <= 9; k++)
 				{
 
 					putchar(x % 10 + '0');
