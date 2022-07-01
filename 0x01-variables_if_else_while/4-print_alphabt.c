@@ -14,7 +14,7 @@ int main(void)
 	for (x = 'A'; x <= 'z'; x++)
 	{
 		x = tolower(x);
-		if(x == 'q' || x == 'e')
+		if (x == 'q' || x == 'e')
 		{
 		continue;
 		}
