@@ -7,8 +7,7 @@
  */
 
 int main(void)
-{
-	int x;
+{	int x;
 	int i;
 	int j;
 	int k;
@@ -20,16 +19,11 @@ int main(void)
 			for (j = x; j <= 9; j++)
 			{
 				if (j != x)
-				{
 					k = 0;
-				}
 				else
-				{
 					k = i + 1;
-				}
 				for (; k <= 9; k++)
 				{
-
 					putchar(x % 10 + '0');
 					putchar(i % 10 + '0');
 					putchar(' ');
@@ -37,10 +31,7 @@ int main(void)
 					putchar(k % 10 + '0');
 
 					if (x == 9 && i == 8)
-					{
-					continue;
-
-					}
+						continue;
 					else
 					{
 						putchar(',');
