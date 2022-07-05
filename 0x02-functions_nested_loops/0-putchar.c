@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * main - entry point
  *
@@ -9,13 +10,4 @@ int main(void)
 {
 	_putchar();
 	return (0);
-}
-
-/**
- * _putchar - print _putchar
- */
-
-void _putchar(void)
-{
-	printf("_putchar");
 }
