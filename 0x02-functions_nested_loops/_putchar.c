@@ -6,7 +6,7 @@
  * _putchar - print _putchar
  */
 
-extern void _putchar()
+extern void _putchar(void)
 {
 	printf("_putchar");
 }
