@@ -6,13 +6,12 @@
 /**
  * _putchar - prints _putchar
  *
- * Return: always 0
+ * Return: no return
  */
 
-int _putchar(void)
+void _putchar(void)
 {
 	printf("_putchar");
-	return (0);
 }
 
 #endif
