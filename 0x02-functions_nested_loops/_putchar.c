@@ -8,7 +8,7 @@
 
 extern void _putchar(void)
 {
-	printf("_putchar");
+	puts("_putchar");
 }
 
 #endif
