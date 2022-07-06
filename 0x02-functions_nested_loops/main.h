@@ -23,4 +23,40 @@ void print_alphabet(void);
  */
 
 void print_alphabet_x10(void);
+
+/**
+ * _islower - checks if a char is lower case
+ * @c: character to be checked either lower or upper case
+ *
+ * Return: none
+ */
+
+int _islower(int c);
+
+/**
+ * _isalpha - checks if a char is lower case
+ * @c: character to be checked either alphabet or not
+ *
+ * Return: none
+ */
+
+int _isalpha(int c);
+
+/**
+ * print_sign - checks sign of number
+ * @n: number to be checked either +, 0 or -
+ *
+ * Return: none
+ */
+
+int print_sign(int n);
+
+/**
+ * _abs - computes absolute value
+ * @int: number to be computed
+ *
+ * Return: none
+ */
+
+int _abs(int);
 #endif
