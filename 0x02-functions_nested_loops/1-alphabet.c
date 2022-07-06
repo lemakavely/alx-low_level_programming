@@ -10,13 +10,6 @@
 
 int main(void)
 {
-	int x;
-
-	for (x = 'A'; x <= 'z'; x++)
-	{
-		x = tolower(x);
-		_putchar(x);
-	}
-	_putchar('\n');
+	print_alphabet();
 	return (0);
 }
