@@ -5,9 +5,10 @@
 
 /**
  * _putchar - prints _putchar
+ * @c: character to be printed
  *
  * Return: no return
  */
 
-void _putchar(void);
+int _putchar(char c);
 #endif
