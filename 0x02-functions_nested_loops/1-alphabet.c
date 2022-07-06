@@ -8,6 +8,18 @@
  * Return: always 0
  */
 
+void print_alphabet(void)
+{
+	int x;
+
+	for (x = 'A'; x <= 'z'; x++)
+	{
+		x = tolower(x);
+		_putchar(x);
+	}
+	_putchar('\n');
+}
+
 int main(void)
 {
 	print_alphabet();
