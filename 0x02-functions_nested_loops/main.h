@@ -59,4 +59,50 @@ int print_sign(int n);
  */
 
 int _abs(int);
+
+/**
+ * print_last_digit - print last digit
+ * @int: number to be computed
+ *
+ * Return: none
+ */
+
+int print_last_digit(int);
+
+
+/**
+ * jack_bauer - print minutes in a day
+ *
+ * Return: none
+ */
+
+void jack_bauer(void);
+
+
+/**
+ * times_table - prints 9 times table
+ *
+ * Return: none
+ */
+
+void times_table(void);
+
+/**
+ * add - add the given numbers
+ * @int: operand 1
+ * @int: operand 2
+ *
+ * Return: none
+ */
+
+int add(int, int);
+
+/**
+ * print_to_98 - prints from n to 98
+ * @n: starting number
+ *
+ * Return: none
+ */
+
+void print_to_98(int n);
 #endif
