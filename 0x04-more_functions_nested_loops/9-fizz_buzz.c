@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - the fizz buzz code
@@ -30,4 +31,5 @@ int main(void)
 		}
 		putchar(' ');
 	}
+	return (0);
 }
