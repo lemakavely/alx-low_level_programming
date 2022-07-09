@@ -54,7 +54,6 @@ int main(void)
 			_putchar('u');
 			_putchar('z');
 			_putchar('z');
-
 		}
 		else
 		{
@@ -63,6 +62,7 @@ int main(void)
 			else
 				_putchar(i + '0');
 		}
+		if (i != 100)
 		_putchar(' ');
 	}
 	return (0);
