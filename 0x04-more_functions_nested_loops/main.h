@@ -103,4 +103,13 @@ void print_square(int size);
 
 void print_triangle(int size);
 
+/**
+ * print_number - print multiple digits and negatives
+ * @n: to be printed
+ *
+ * Return: none
+ */
+
+void print_number(int n);
+
 #endif
