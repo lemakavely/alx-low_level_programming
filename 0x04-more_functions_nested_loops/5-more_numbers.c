@@ -2,6 +2,22 @@
 #include "main.h"
 
 /**
+ * print - print multiple digits
+ * @n: to be printed
+ *
+ * Return: none
+ */
+
+void print(int n)
+{
+	if (n / 10)
+	{
+		print(n / 10);
+	}
+	_putchar(n % 10 + '0');
+}
+
+/**
  * print_more_numbers - print from 0 to 14 ten times
  *
  * Return: none
@@ -18,12 +34,11 @@ void more_numbers(void)
 		{
 			if (i / 10)
 			{
-				_putchar(i / 10 + '0');
-				_putchar(i % 10 + '0');
+				print(i);
 			}
 			else
 			{
-				_putchar(i + '0');
+			_putchar(i + '0');
 			}
 		}
 		_putchar('\n');
