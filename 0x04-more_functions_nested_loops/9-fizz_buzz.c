@@ -1,5 +1,22 @@
 #include <stdio.h>
-#include "main.h"
+#include "_putchar.c"
+
+
+/**
+ * print - print multiple digits
+ * @n: to be printed
+ *
+ * Return: none
+ */
+
+void print(int n)
+{
+	if (n / 10)
+	{
+		print(n / 10);
+	}
+	_putchar(n % 10 + '0');
+}
 
 /**
  * main - the fizz buzz code
@@ -15,21 +32,38 @@ int main(void)
 	{
 		if (!(i % 3) && !(i % 5))
 		{
-			printf("%s", "FizzBuzz");
+			_putchar('F');
+			_putchar('i');
+			_putchar('z');
+			_putchar('z');
+			_putchar('B');
+			_putchar('u');
+			_putchar('z');
+			_putchar('z');
 		}
 		else if (!(i % 3) && i % 5)
 		{
-			printf("%s", "Fizz");
+			_putchar('F');
+			_putchar('i');
+			_putchar('z');
+			_putchar('z');
 		}
 		else if (!(i % 5) && i % 3)
 		{
-			printf("%s", "Buzz");
+			_putchar('B');
+			_putchar('u');
+			_putchar('z');
+			_putchar('z');
+
 		}
 		else
 		{
-			printf("%d", i);
+			if (i / 10)
+			print(i);
+			else
+				_putchar(i + '0');
 		}
-		putchar(' ');
+		_putchar(' ');
 	}
 	return (0);
 }
