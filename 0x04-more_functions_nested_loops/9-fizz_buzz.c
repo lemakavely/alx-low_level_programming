@@ -36,7 +36,7 @@ int main(void)
 			_putchar('i');
 			_putchar('z');
 			_putchar('z');
-			_putchar('B');
+			_putchar('c');
 			_putchar('u');
 			_putchar('z');
 			_putchar('z');
