@@ -4,6 +4,15 @@
 #include <stdio.h>
 
 /**
+ * _putchar - print a char
+ * @c: character to be printed
+ *
+ * Return: none
+ */
+
+void _putchar(char c);
+
+/**
  * _isupper - checks if a char is upper case or not
  * @c: character to be checked
  *
