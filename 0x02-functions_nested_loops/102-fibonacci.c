@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - entry point
+ * Return: 0
+ */
+
 int main(void)
 {
 	int k;
@@ -8,9 +13,8 @@ int main(void)
 	long int sum = i + j;
 
 	for (k = 3; k <= 52; ++k)
-	//while (sum <= 20365011074)
 	{
-		printf("%d\n", sum);
+		printf("%ld\n", sum);
 		i = j;
 		j = sum;
 		sum = i + j;
