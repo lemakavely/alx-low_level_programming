@@ -32,5 +32,6 @@ int main(void)
 		i++;
 	}
 	print(sum);
+	putchar('\n');
 	return (0);
 }
