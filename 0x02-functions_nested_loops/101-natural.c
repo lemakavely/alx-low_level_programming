@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "_putchar.c"
 
 /**
  * print - prints long int
@@ -11,7 +10,7 @@ void print(int n)
 {
 	if (n / 10)
 		print(n / 10);
-	_putchar(n % 10 + '0');
+	putchar(n % 10 + '0');
 }
 
 /**
