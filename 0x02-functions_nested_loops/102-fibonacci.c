@@ -14,11 +14,17 @@ int main(void)
 
 	for (k = 3; k <= 52; ++k)
 	{
-		printf("%lu", sum);
+		if (k == 52)
+			printf("%lu", sum);
+		else
+		{
+		printf("%lu, ", sum);
 		i = j;
 		j = sum;
 		sum = i + j;
+		}
 	}
+	putchar('\n');
 	return (0);
 }
 
