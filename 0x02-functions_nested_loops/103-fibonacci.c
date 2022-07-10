@@ -7,23 +7,22 @@
 
 int main(void)
 {
-	int k;
 	unsigned long i = 0;
 	unsigned long j = 1;
 	unsigned long sum = i + j;
+	unsigned long new_sum = 0;
 
-	for (k = 3; k <= 52; ++k)
+	while (sum <= 4000000)
 	{
-		if (k == 52)
-			printf("%lu", sum);
-		else
+		if (sum % 2 == 0)
 		{
-		printf("%lu, ", sum);
+			new_sum += sum;
+		}
 		i = j;
 		j = sum;
 		sum = i + j;
-		}
 	}
+	printf("%lu", new_sum);
 	putchar('\n');
 	return (0);
 }
