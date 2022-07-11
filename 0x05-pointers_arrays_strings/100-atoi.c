@@ -1,11 +1,16 @@
-#include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 #include <stdio.h>
 
+/**
+ * _atoi - change string to integer
+ * @s: operand
+ * Return: num
+ */
+
 int _atoi(char *s)
 {
-	int len, i;
+	int len, i, num, c = 0;
 	int j = 0;
 
 	len = strlen(s);
@@ -15,15 +20,18 @@ int _atoi(char *s)
 		if (isdigit(s[i]))
 		{
 			j = j * 10 + s[i] - '0';
-			if (s[i-1] == '-')
-			{
-				j = -j;
-			}
 		}
 		else
 			continue;
 		if (isalpha(s[i + 2]))
 			break;
 	}
-	return (j);
+	num = j;
+	do {
+		j /= 10;
+		++c;
+	} while (j != 0);
+	if (i - c != 0 && s[i - 1 - c] == '-')
+		num = -num;
+	return (num);
 }
