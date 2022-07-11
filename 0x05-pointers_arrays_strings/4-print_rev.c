@@ -18,6 +18,9 @@ void print_rev(char *s)
 	len = p - s;
 	for (i = len; i >= 0; i--)
 	{
-		printf("%c", *(s + i));
+		if (*(s + i) == '\0')
+			continue;
+		putchar(*(s + i));
 	}
+	putchar('\n');
 }
