@@ -9,7 +9,7 @@ int main(void)
 {
 	int n;
 
-	n = _atoi("--214748364");
+	n = _atoi("        +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA            ");
 	printf("%d\n", n);
 	return (0);
 }
