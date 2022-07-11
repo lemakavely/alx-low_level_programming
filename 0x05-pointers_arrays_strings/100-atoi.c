@@ -10,8 +10,8 @@
 
 int _atoi(char *s)
 {
-	int len, i, num, c = 0;
-	int j = 0;
+	int len, i, d = 0;
+	unsigned int j = 0;
 
 	len = strlen(s);
 
@@ -26,12 +26,12 @@ int _atoi(char *s)
 		if (isalpha(s[i + 2]))
 			break;
 	}
-	num = j;
-	do {
-		j /= 10;
-		++c;
-	} while (j != 0);
-	if (i - c != 0 && s[i - 1 - c] == '-')
-		num = -num;
-	return (num);
+	for (i = 0; i < len; i++)
+	{
+		if (s[i] == '-')
+			d++;
+	}
+	if (d % 2)
+		j = -j;
+	return (j);
 }
