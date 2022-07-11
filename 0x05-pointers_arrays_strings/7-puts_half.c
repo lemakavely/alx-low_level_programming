@@ -20,6 +20,8 @@ void puts_half(char *str)
 		p = p + len / 2;
 	for (i = len / 2; i < len; p++, i++)
 	{
+		if (*p == '\0')
+			continue;
 		putchar(*p);
 	}
 	putchar('\n');
