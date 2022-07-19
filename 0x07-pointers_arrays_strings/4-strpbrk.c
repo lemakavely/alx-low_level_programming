@@ -22,14 +22,11 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (j = 0; j < q; j++)
 		{
-			if (accept[j] == s[i])
+			if (s[i] == accept[j])
 				break;
 		}
-		if (accept[j] == s[i])
-			break;
+		if (s[i] == accept[j])
+			return (s + i);
 	}
-	if (accept[j] == s[i])
-		return (s + i);
-	else
-		return (NULL);
+	return (0);
 }
