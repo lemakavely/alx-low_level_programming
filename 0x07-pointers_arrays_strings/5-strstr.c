@@ -14,14 +14,19 @@ char *_strstr(char *haystack, char *needle)
 	unsigned int j;
 	unsigned int p;
 	unsigned int i = 0;
+	unsigned int q;
 
 	p = strlen(haystack);
-	for (j = 0; j < p; j++)
+	q = strlen(needle);
+	for (i = 0; i < q; i++)
 	{
+		for (j = 0; j < p; j++)
+		{
+			if (needle[i] == haystack[j])
+			break;
+		}
 		if (needle[i] == haystack[j])
-		break;
+			return (haystack + j);
 	}
-	if (needle[i] == haystack[j])
-		return (haystack + j);
 	return (0);
 }
