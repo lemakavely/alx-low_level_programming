@@ -4,7 +4,7 @@
  * sqrt_finder - finds the aquare root of j
  * @i: expected square root of j
  * @j: number to be computed
- * 
+ *
  * Return: square root of j
  */
 
@@ -20,7 +20,7 @@ int sqrt_finder(int i, int j)
 /**
  * _sqrt_recursion - print square rrot of n
  * @n: number to be computed
- * 
+ *
  * Return: -1 or square root of n
  */
 
