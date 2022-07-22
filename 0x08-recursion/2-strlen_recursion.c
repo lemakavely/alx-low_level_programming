@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _strlen_recursion - print string length
@@ -8,7 +7,7 @@
  * Return: string length or null
  */
 
-void _strlen_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	if (s[0] == '\0')
 		return (0);
