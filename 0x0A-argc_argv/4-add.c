@@ -23,17 +23,10 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			printf("%s\n", "Error");
+			puts("Error");
 			return (1);
 		}
 	}
-	if (!argv[1])
-	{
-		printf("%d\n", 0);
-	}
-	if (sum)
-	{
-		printf("%d\n", sum);
-	}
+	printf("%d\n", sum);
 	return (0);
 }
