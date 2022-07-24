@@ -11,22 +11,22 @@
 
 int main(int argc, char **argv)
 {
-	int i, j, coins = 0, totalcoins = 0;
+	int i, j = 0, coins = 0, totalcoins = 0;
 	int stdcoins[] = {25, 10, 5, 2, 1};
 
-	j = atoi(argv[1]);
 	if (argc != 2)
 	{
 		puts("Error");
 		return (1);
 	}
-	else if (j <= 0)
+	if (j <= 0)
 	{
 		printf("%d\n", 0);
 		return (1);
 	}
 	else
 	{
+		j = atoi(argv[1]);
 		for (i = 0; stdcoins[i]; i++)
 		{
 			coins = j / stdcoins[i];
