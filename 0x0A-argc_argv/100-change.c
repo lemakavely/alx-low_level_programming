@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 			if (j == 0)
 				break;
 		}
-		printf("%d\n", totalcoins);
 	}
+	printf("%d\n", totalcoins);
 	return (0);
 }
