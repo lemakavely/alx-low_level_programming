@@ -19,7 +19,7 @@ char *_strdup(char *str)
 
 	if (str == NULL || arr == NULL)
 		return (NULL);
-	for (i = 0; i < j; i++)
+	for (i = 0; i < j + 1; i++)
 	{
 		arr[i] = str[i];
 	}
