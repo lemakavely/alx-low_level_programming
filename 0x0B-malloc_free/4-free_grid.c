@@ -1,8 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include "3-alloc_grid.c"
 
 /**
  * free_grid - frees a grid of int
