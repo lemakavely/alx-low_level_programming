@@ -9,7 +9,11 @@
  * Return: pointer to the array or null
  */
 
-void free_grid(int **grid, int height __attribute__((unused)))
+void free_grid(int **grid, int height)
 {
+	int i;
+
+	for (i = 0; i < height; i++)
+		free(grid[i]);
 	free(grid);
 }
