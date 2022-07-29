@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * string_nconcat - concatenate strings
@@ -24,10 +23,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			j++;
 	if (j > n)
 		j = n;
-	printf("j is: %d\n", j);
 	ptr = malloc(i + j + 1);
 	if (ptr == NULL)
-		return (0);
+		return (NULL);
 	for (k = 0; k < i; k++)
 		ptr[k] = s1[k];
 	while (k < i + j && s2 != NULL)
