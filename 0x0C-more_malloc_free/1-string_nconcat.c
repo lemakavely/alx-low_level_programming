@@ -4,60 +4,60 @@
 
 /**
  * malloc_size - finds size for malloc
- * @s1: string one input
- * @s2: string two input
- * @n: size of s2 to concat
+ * @str1: string one input
+ * @str2: string two input
+ * @m: size of s2 to concat
  *
  * Return: len
  */
 
-int malloc_size(char *s1, char *s2, unsigned int n)
+int malloc_size(char *str1, char *str2, unsigned int m)
 {
 	unsigned int len0, len1, len;
 
-	if (s1 == NULL)
+	if (str1 == NULL)
 		len0 = 0;
 	else
-		len0 = strlen(s1);
-	if (s2 == NULL)
+		len0 = strlen(str1);
+	if (str2 == NULL)
 		len1 = 0;
 	else
-		len1 = strlen(s2);
-	if (len1 < n)
+		len1 = strlen(str2);
+	if (len1 < m)
 		len = len0 + len1 + 1;
 	else
-		len = len0 + n + 1;
+		len = len0 + m + 1;
 	return (len);
 }
 
 /**
  * first_string - fill pointer
- * @s1: first string
- * @s2: second string
- * @ptr: pointer to concatenated string
- * @n: size of s2 to concat
+ * @st1: first string
+ * @st2: second string
+ * @ptr1: pointer to concatenated string
+ * @o: size of s2 to concat
  * Return: pointer to concatenated string
  */
 
-char *first_string(char *s1, char *s2, char *ptr, unsigned int n)
+char *first_string(char *st1, char *st2, char *ptr1, unsigned int o)
 {
 	unsigned int i = 0, j = 0;
 
-	while (*s1 != '\0')
+	while (*st1 != '\0')
 	{
-		ptr[i] = *s1;
-		s1++;
+		ptr1[i] = *st1;
+		st1++;
 		i++;
 	}
 	j = i;
-	while (*s2 != '\0' && i - j < n)
+	while (*st2 != '\0' && i - j < o)
 	{
-		ptr[i] = *s2;
-		s2++;
+		ptr1[i] = *st2;
+		st2++;
 		i++;
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	ptr1[i] = '\0';
+	return (ptr1);
 }
 
 
