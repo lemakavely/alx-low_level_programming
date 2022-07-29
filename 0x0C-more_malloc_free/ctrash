@@ -1,0 +1,50 @@
+#include "main.h"
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * malloc_size - finds size for malloc
+ * @str1: string one input
+ * @str2: string two input
+ * @m: size of s2 to concat
+ *
+ * Return: len
+ */
+
+int malloc_size(char *str1, char *str2, unsigned int m)
+{
+	unsigned int len0, len1, len;
+
+	if (str1 == NULL)
+		len0 = 0;
+	else
+		len0 = strlen(str1);
+	if (str2 == NULL)
+		len1 = 0;
+	else
+		len1 = strlen(str2);
+	if (len1 < m)
+		len = len0 + len1 + 1;
+	else
+		len = len0 + m + 1;
+	return (len);
+}
+
+/**
+ * first_string - fill pointer
+ * @st1: first string
+ * @st2: second string
+ * @ptr1: pointer to concatenated string
+ * @o: size of s2 to concat
+ * Return: pointer to concatenated string
+ */
+
+char *first_string(char *st1, char *st2, char *ptr1, unsigned int o)
+{
+	unsigned int i = 0, j = 0;
+
+	while (*st1 != '\0')
+	{
+		ptr1[i] = *st1;
+		st1++;
+		i++;
