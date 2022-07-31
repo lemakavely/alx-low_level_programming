@@ -16,10 +16,10 @@ int wrdcnt(char *s)
 	{
 		if (i == 0 && s[0] != ' ')
 			j++;
-		if (s[i] == ' ' && s[i + 1] != ' ')
+		if (s[i] == ' ' && s[i + 1] != ' ' && s[i + 1])
 			j++;
 	}
-	return (j - 1);
+	return (j);
 }
 
 /**
