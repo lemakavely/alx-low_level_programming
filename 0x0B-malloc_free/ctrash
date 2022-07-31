@@ -1,0 +1,6 @@
+	if (str[q] == '	' && m - v + 1 > 0)
+			{
+				ar[p][j] = '\0';
+				break;
+			}
+			else

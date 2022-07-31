@@ -1,7 +1,50 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+
+/**
+ * wrdcnt - count words in a string
+ * @s: pointer to the string
+ *
+ * Return: number of words
+ */
+
+int wrdcnt(char *s)
+{
+	int i = 0, j = 0;
+
+	for (i = 0; s[i]; i++)
+	{
+		if (i == 0 && s[0] != ' ')
+			j++;
+		if (s[i] == ' ' && s[i + 1] != ' ')
+			j++;
+	}
+	return (j);
+}
+
+/**
+ * charcnt - cout characters in a string
+ * @s1: string input pointer
+ * @i: the ith word to compute
+ *
+ * Return: number of chars
+ */
+
+int charcnt(char *s1, int i)
+{
+	int j = 0, k = 0, w = 0;
+
+	for (j = 0; s1[j]; j++)
+	{
+		if (j == 0 && s1[0] != ' ')
+			k++;
+		if (s1[j] == ' ' && s1[j + 1] != ' ')
+			k++;
+		if (k == i + 1 && s1[j] != ' ')
+			w++;
+	}
+	return (w);
+}
 
 /**
  * strtow - returns pointer to string of words
@@ -12,67 +55,37 @@
 
 char **strtow(char *str)
 {
-	char **ar;
-	int i = 0, j = 0, p = 0, q = 0, o = 0, l = 0, m = 0, n = 0, k = 0;
+	char **arr;
+	int i = 0, p = 0, j = 0, k = 0, l = 0, m = 0, n = 0, o = 0;
 
-	if (str == 0 || strcmp(str, "") == 0)
+	if (str == NULL || *str == '\0')
 		return (NULL);
-	while (str[k])
-	{
-		if (str[k] == ' ' && str[k + 1] == ' ')
-		{	
-			k++;
-			continue;
-		}
-		else if (str[k] == ' ' && str[k + 1] != ' ' && l != 0)
-		{
-			n++;
-			k++;
-			l++;
-		}
-		else
-		{
-			l++;
-			k++;
-		}
-	}
-	printf("word count is: %d\ncharcount without spaces is: %d\ncharcount with spaces considered is: %d\n", n, l, k);
-	puts("succesfully found word count and char count");
-	ar = (char **)malloc(n);
-	if (ar == NULL)
+	m = wrdcnt(str);
+	arr = (char **)malloc(m);
+	if (arr == NULL)
 		return (NULL);
-	for (o = 0; o < n; o++)
+	arr[m - 1] = NULL;
+	for (i = 0; i < m; i++)
 	{
-	for (p = 0; p < l; p++)
-	{
-	{
-	if (str[p] == ' ' && str[o + 1] != ' ')
+		arr[i] = (char *)malloc(charcnt(str, i) + 1);
+		if (arr[i] == NULL)
 		{
-			while (str[o + m] != ' ')
-			{
-				m++;
-			}
+			for (p = 0; p < m; p++)
+				free(arr[p]);
+			free(arr[m - 1]);
+			free(arr);
+			return (NULL);
 		}
 	}
-		ar[p] = (char *)malloc(m);
-	}
-	}
-	printf("m is: %d\no is: %d\n", m, o);
-	puts("scond loop passed and width found");
-	printf("%d\n", n);
-	for (i = 0; i < n; i++)
+	for (j = 0; j < m; j++)
 	{
-		for (j = 0; j <= m; j++)
+		for (l = o; str[l] == ' '; l++);
+		n = charcnt(str, j);
+		for (k = 0, o = l; k < n && str[o] != ' '; k++, o++)
 		{
-			if (str[q] == '	')
-			{
-				ar[i][j] = '\0';
-				break;
-			}
-			else
-				ar[i][j] = str[q];
-			q++;
+			arr[j][k] = str[o];
 		}
+		arr[j][k] = '\0';
 	}
-	return (ar);
+	return (arr);
 }

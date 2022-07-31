@@ -27,7 +27,7 @@ int main(void)
 {
     char **tab;
 
-    tab = strtow("      ALX School         #cisfun      ");
+    tab = strtow("      ALX School         #cisfun      then itttttt try to add text but it doesnt seems to work");
     if (tab == NULL)
     {
         printf("Failed\n");
