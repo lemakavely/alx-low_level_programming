@@ -56,29 +56,31 @@ int charcnt(char *s1, int i)
 char **strtow(char *str)
 {
 	char **arr;
-	int i = 0, q = 0, p = 0, j = 0, k = 0, l = 0, m = 0, n = 0, o = 0;
+	int i = 0, x = 0, z = 0, j = 0, k = 0, l = 0, m = 0, n = 0, o = 0;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	for (q = 0; str[q]; q++)
-		;
-	if (q == 1 && str[0] == ' ')
+	for (z = 0; str[z]; z++)
+	{
+		if (str[z] == ' ')
+			x = 0;
+		else
+		{
+			x = 1;
+			break;
+		}
+	}
+	if (x == 0)
 		return (NULL);
 	m = wrdcnt(str);
-	arr = malloc(sizeof(char *) * (m + 1));
+	arr = malloc(sizeof(char *) * (m));
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0; i < m; i++)
 	{
 		arr[i] = (char *)malloc(sizeof(char) * (charcnt(str, i)) + 1);
 		if (arr[i] == NULL)
-		{
-			for (p = 0; p < m; p++)
-				free(arr[p]);
-			free(arr[m]);
-			free(arr);
 			return (NULL);
-		}
 	}
 	for (j = 0; j < m; j++)
 	{
