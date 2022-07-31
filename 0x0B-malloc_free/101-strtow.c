@@ -19,7 +19,7 @@ int wrdcnt(char *s)
 		if (s[i] == ' ' && s[i + 1] != ' ')
 			j++;
 	}
-	return (j);
+	return (j - 1);
 }
 
 /**
@@ -89,9 +89,6 @@ char **strtow(char *str)
 		n = charcnt(str, j);
 		for (k = 0, o = l; k < n && str[o] != ' '; k++, o++)
 			arr[j][k] = str[o];
-		if (j == m - 1)
-			break;
-		arr[j][k] = '\0';
 	}
 	return (arr);
 }
