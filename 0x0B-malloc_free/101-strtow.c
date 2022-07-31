@@ -70,7 +70,7 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0; i < m; i++)
 	{
-		arr[i] = (char *)malloc(sizeof(char) * (charcnt(str, i)));
+		arr[i] = (char *)malloc(sizeof(char) * (charcnt(str, i)) + 1);
 		if (arr[i] == NULL)
 		{
 			for (p = 0; p < m; p++)
@@ -87,6 +87,8 @@ char **strtow(char *str)
 		n = charcnt(str, j);
 		for (k = 0, o = l; k < n && str[o] != ' '; k++, o++)
 			arr[j][k] = str[o];
+		if (j == m - 1)
+			break;
 		arr[j][k] = '\0';
 	}
 	return (arr);
