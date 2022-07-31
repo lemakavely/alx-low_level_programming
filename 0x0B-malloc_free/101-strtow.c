@@ -61,30 +61,29 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	m = wrdcnt(str);
-	arr = (char **)malloc(m);
+	arr = malloc(sizeof(char*) * (m + 1));
 	if (arr == NULL)
 		return (NULL);
-	arr[m - 1] = NULL;
-	for (i = 0; i < m; i++)
+	arr[m] = NULL;
+	for (i = 0; i <= m; i++)
 	{
-		arr[i] = (char *)malloc(charcnt(str, i) + 1);
+		arr[i] = (char *)malloc(sizeof(char) * (charcnt(str, i) + 1));
 		if (arr[i] == NULL)
 		{
-			for (p = 0; p < m; p++)
+			for (p = 0; p <= m; p++)
 				free(arr[p]);
-			free(arr[m - 1]);
+			free(arr[m]);
 			free(arr);
 			return (NULL);
 		}
 	}
-	for (j = 0; j < m; j++)
+	for (j = 0; j <= m; j++)
 	{
-		for (l = o; str[l] == ' '; l++);
+		for (l = o; str[l] == ' '; l++)
+			;
 		n = charcnt(str, j);
 		for (k = 0, o = l; k < n && str[o] != ' '; k++, o++)
-		{
 			arr[j][k] = str[o];
-		}
 		arr[j][k] = '\0';
 	}
 	return (arr);
