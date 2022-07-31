@@ -64,20 +64,19 @@ char **strtow(char *str)
 	arr = malloc(sizeof(char*) * (m + 1));
 	if (arr == NULL)
 		return (NULL);
-	arr[m] = NULL;
-	for (i = 0; i <= m; i++)
+	for (i = 0; i < m; i++)
 	{
 		arr[i] = (char *)malloc(sizeof(char) * (charcnt(str, i) + 1));
 		if (arr[i] == NULL)
 		{
-			for (p = 0; p <= m; p++)
+			for (p = 0; p < m; p++)
 				free(arr[p]);
 			free(arr[m]);
 			free(arr);
 			return (NULL);
 		}
 	}
-	for (j = 0; j <= m; j++)
+	for (j = 0; j < m; j++)
 	{
 		for (l = o; str[l] == ' '; l++)
 			;
