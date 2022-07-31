@@ -73,7 +73,7 @@ char **strtow(char *str)
 	if (x == 0)
 		return (NULL);
 	m = wrdcnt(str);
-	arr = malloc(sizeof(char *) * (m));
+	arr = malloc(sizeof(char *) * (m + 1));
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0; i < m; i++)
