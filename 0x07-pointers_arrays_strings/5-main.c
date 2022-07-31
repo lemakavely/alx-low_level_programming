@@ -9,10 +9,13 @@
 int main(void)
 {
     char *s = "hello, world";
-    char *f = "world";
+    char *f = "gworld";
     char *t;
 
     t = _strstr(s, f);
-    printf("%s\n", t);
+    if (t == NULL)
+	    puts("failed");
+    else
+    	printf("%s\n", t);
     return (0);
 }
