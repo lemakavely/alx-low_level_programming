@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
  * _strstr - char occurance check
@@ -11,22 +12,26 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int j;
-	unsigned int p;
-	unsigned int i = 0;
-	unsigned int q;
+	unsigned int j = 0, p = 0, q = 0, x = 0, y = 0;
 
 	p = strlen(haystack);
 	q = strlen(needle);
-	for (i = 0; i < q; i++)
+	for (j = 0; j < p; j++)
 	{
-		for (j = 0; j < p; j++)
+		if (needle[0] == haystack[j])
 		{
-			if (needle[i] == haystack[j])
-			break;
+			for (x = j, y = 0; y < q && x < p; x++, y++)
+			{
+				if (needle[y] != haystack[x])
+					break;
+				else
+					continue;
+			}
+			if (y == q)
+				break;
 		}
-		if (needle[i] == haystack[j])
-			return (haystack + j);
 	}
+	if (y == q)
+		return (haystack + j);
 	return (0);
 }
