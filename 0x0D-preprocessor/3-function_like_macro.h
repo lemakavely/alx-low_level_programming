@@ -2,8 +2,8 @@
 
 #define FUNCTION_LIKE_MACRO_H
 
-int lemakavely = 0;
-
 #define ABS(x) ((x < 0) ? (x * -1) : x)
 
 #endif
+
+int lemakavely(void);
