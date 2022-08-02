@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include "_putchar.c"
 
 /**
  * print_number - print integer
@@ -9,13 +10,18 @@
 
 void print_number(int n)
 {
-	int num, count;
+	int num, count = 0;
 
 	num = n;
 	while (n != 0)
 	{
 		n = n / 10;
 		count++;
+	}
+	if (num < 0)
+	{
+		_putchar('-');
+		num = -(num);
 	}
 	if (count == 4)
 	{
@@ -30,9 +36,11 @@ void print_number(int n)
 		_putchar((num % 100) / 10 + '0');
 		_putchar(num % 10 + '0');
 	}
-	else
+	else if (count == 2)
 	{
 		_putchar(num / 10 + '0');
 		_putchar(num % 10 + '0');
 	}
+	else
+		_putchar(num % 10 + '0');
 }
