@@ -12,7 +12,7 @@ int main(void)
 	unsigned long j = 1, a, b, c, d, e, f, l;
 	unsigned long sum = i + j;
 
-	for (k = 3; k < 89; ++k)
+	for (k = 3; k < 91; ++k)
 	{
 		printf("%lu, ", sum);
 		i = j;
@@ -23,7 +23,7 @@ int main(void)
 	b = j % 1000000000;
 	c = sum / 1000000000;
 	d = sum % 1000000000;
-	for (l = 89; l < 100; l++)
+	for (l = 91; l < 100; l++)
 	{
 		printf("%lu%lu, ", c, d);
 		e = a;
@@ -34,7 +34,5 @@ int main(void)
 		d = (f + b) % 1000000000;
 	}
 	printf("%lu%lu\n", c, d);
-	putchar('\n');
-	putchar('\n');
 	return (0);
 }
