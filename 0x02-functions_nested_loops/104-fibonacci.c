@@ -35,5 +35,6 @@ int main(void)
 	}
 	printf("%lu%lu\n", c, d);
 	putchar('\n');
+	putchar('\n');
 	return (0);
 }
