@@ -24,6 +24,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 				break;
 		}
 	}
+	else
+		return (-1);
 	if (j != size)
 		return (j);
 	else
