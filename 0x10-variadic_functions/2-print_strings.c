@@ -21,12 +21,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		s = va_arg(lemak, char *);
-		if (s && i != n - 1)
-			printf("%s%s ", s, separator);
-		else if (s && i == n - 1)
-			printf("%s", s);
+		if (s)
+			printf("%s ", s);
 		else
 			printf("(nil)");
+		if (separator && i != n - 1)
+			printf("%s", separator);
 	}
 	printf("\n");
 	va_end(lemak);
