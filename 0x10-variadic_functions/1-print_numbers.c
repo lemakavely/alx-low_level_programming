@@ -23,6 +23,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%d", va_arg(lemak, int));
 	}
-	va_end(lemak);
 	printf("\n");
+	va_end(lemak);
 }
