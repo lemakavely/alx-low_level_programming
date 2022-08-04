@@ -13,15 +13,17 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
+	int num;
 	va_list lemak;
 
 	va_start(lemak, n);
 	for (i = 0; i < n; i++)
 	{
-		if (i != n - 1)
-			printf("%d%s", va_arg(lemak, int), separator);
+		num = va_arg(lemak, int);
+		if (i < n - 1)
+			printf("%d%s", num, separator);
 		else
-			printf("%d", va_arg(lemak, int));
+			printf("%d", num);
 	}
 	printf("\n");
 	va_end(lemak);
