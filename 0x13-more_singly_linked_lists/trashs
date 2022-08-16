@@ -1,0 +1,6 @@
+		else if (idx > i)
+		return (NULL);
+{
+		next->next = new;
+		new->next = NULL;
+		tmp = new;
