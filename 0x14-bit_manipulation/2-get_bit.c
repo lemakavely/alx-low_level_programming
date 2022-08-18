@@ -10,16 +10,13 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i = 0;
-	int val[32];
+	unsigned long int m, k;
 
-	while (n)
-	{
-		val[i] = n % 2;
-		n /= 2;
-		i++;
-	}
-	if (index >= i)
+	k = 1 << index;
+	m = n & k;
+	if (m == k)
+		return (1);
+	if (index  > (sizeof(unsigned long int) * 8 - 1))
 		return (-1);
-	return (val[index]);
+	return (0);
 }
