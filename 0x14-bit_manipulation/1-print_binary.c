@@ -30,18 +30,16 @@ unsigned long int power_of_two(int exp)
 void print(unsigned long int num, int j)
 {
 	int flag, i = 0;
-	unsigned long int n;
 
 	for (i = j; i >= 0; i--)
 	{
-		n = num / power_of_two(i);
-		if (n == 1)
+		if (num >= power_of_two(i))
 		{
 			_putchar('1');
 			flag = 1;
 			num -= power_of_two(i);
 		}
-		else if (n == 0 && flag == 1)
+		else if (num < power_of_two(i) && flag == 1)
 		{
 			_putchar('0');
 		}
