@@ -16,21 +16,22 @@ listint_t *reverse_listint(listint_t **head)
 
 	if (head == NULL)
 		return (NULL);
-	next_node = (*head)->next;
+	next_node = *head;
+	tmp = *head;
+	(*head)->next = NULL;
 	while (next_node != NULL)
 	{
-		tmp = next_node->next;
-		if (tmp != NULL)
+		if (next_node->next != NULL)
 		{
-			next_node->next = *head;
-			*head = (*head)->next;
-			next_node = tmp;
+			next_node->next = tmp;
+			tmp = tmp->next;
+			next_node = next_node->next;
 		}
 		else
 		{
-			tmp = *head;
+			next_node->next = tmp;
+			*head = next_node;
 		}
 	}
-	*head = next_node;
 	return (*head);
 }
